@@ -1,14 +1,21 @@
 ﻿using LuxyGaming.Models;
+using LuxyGaming.Models.DataAccess;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LuxyGaming.Controllers
 {
     public class ContactController : Controller
     {
+        private readonly LuxyDbContext _dbContext;
+
+        public ContactController(LuxyDbContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
+
         public IActionResult Index()
         {
-            Contact contact = new("Contact Us", "SAY HELLO", "Əlaqə üçün aşağıdakı məlumatları doldurun", "Nasimi disctrict", "+994554770076", "hikmetwebdev@gmail.com");
-            return View(contact);
+            return View(_dbContext.Contacts.FirstOrDefault());
         }
     }
 }

@@ -9,15 +9,8 @@
         public string Phone { get; set; }
         public string Email { get; set; }
 
-        public Contact(string title, string text, string desc, string adress, string phone, string email)
-        {
-            Title = title;
-            Text = text;
-            Description = desc;
-            Address = adress;
-            Phone = phone;
-            Email = email;
 
-        }
+      
+  
     }
 }

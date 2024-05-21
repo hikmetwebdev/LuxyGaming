@@ -96,13 +96,13 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="item">
                         <div class="thumb">
-                            <a href="product-details.html"><img width="300px" height="300px" src="~/assets/images/@games.ImageUrl" alt=""></a>
+                            <a asp-controller="Home" asp-action="Detail" asp-route-id="@games.Id"><img width="300px" height="300px" src="~/assets/images/@games.ImageUrl" alt=""></a>
                             <span class="price"><em>$@games.Price</em>$@games.Discount</span>
                         </div>
                         <div class="down-content">
                             <span class="category">@Model.Categories.FirstOrDefault(x=>x.Id==games.CategoryId).Name</span>
                             <h4>@games.Name</h4>
-                            <a href="product-details.html"><i class="fa fa-shopping-bag"></i></a>
+                            <a asp-controller="Home" asp-action="Detail" asp-route-id="@games.Id"><i class="fa fa-shopping-bag"></i></a>
                         </div>
                     </div>
                 </div>
@@ -131,12 +131,12 @@
                     <div class="col-lg-2 col-md-6 col-sm-6">
                         <div class="item">
                             <div class="thumb">
-                                <a href="product-details.html"><img width="300px" height="250px" src="~/assets/images/@game.ImageUrl" alt=""></a>
+                                <a asp-controller="Home" asp-action="Detail" asp-route-id="@game.Id"><img width="300px" height="250px" src="~/assets/images/@game.ImageUrl" alt=""></a>
                             </div>
                             <div class="down-content">
                                 <span class="category">@Model.Categories.FirstOrDefault(x=>x.Id==game.CategoryId).Name</span>
                                 <h4>@game.Name</h4>
-                                <a href="product-details.html">Explore</a>
+                                <a asp-controller="Home" asp-action="Detail" asp-route-id="@game.Id">Explore</a>
                             </div>
                         </div>
                     </div>
@@ -163,7 +163,7 @@
                     <div class="item">
                         <h4>@item.Name</h4>
                         <div class="thumb">
-                            <a href="product-details.html"><img src="~/assets/images/@item.ImageUrl" alt=""></a>
+                            <a href="#"><img src="~/assets/images/@item.ImageUrl" alt=""></a>
                         </div>
                     </div>
                 </div>
